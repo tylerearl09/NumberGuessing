@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StatsFragment">
+
+    <View
+        android:id="@+id/topBuffer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:visibility="invisible"
+        android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:id="@+id/previousGuessPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Previous Guess: "
+        android:textSize="20sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/previousGuessText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="20sp"
+        android:layout_toRightOf="@+id/previousGuessPrompt"
+        android:layout_alignBaseline="@+id/previousGuessPrompt"/>
+
+    <TextView
+        android:id="@+id/timeRemainingPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time Remaining: "
+        android:layout_below="@+id/topBuffer" />
+
+    <TextView
+        android:id="@+id/timeRemainingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_toEndOf="@+id/timeRemainingPrompt"
+        android:layout_alignBaseline="@+id/timeRemainingPrompt"
+        android:text="30" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numberRangePrompt"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="1dp"
+        android:max="500"
+        android:min="10" />
+
+    <TextView
+        android:id="@+id/numberRangePrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number Range: "
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_alignBaseline="@id/numRangeText"
+        android:layout_toStartOf="@+id/numRangeText"
+        />
+
+    <TextView
+        android:id="@+id/numRangeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:paddingEnd="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/topBuffer"
+        android:text="10"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/numberCorrectPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number Correct: "
+        android:layout_below="@+id/timeRemainingPrompt"/>
+
+    <TextView
+        android:id="@+id/numCorrectText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_toRightOf="@+id/numberCorrectPrompt"
+        android:layout_alignBaseline="@+id/numberCorrectPrompt"
+        />
+
+    <Button
+        android:id="@+id/newNumberButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Number"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

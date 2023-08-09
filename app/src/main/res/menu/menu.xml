@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="Zero Correct Count"
+        android:id="@+id/menuActionZero"
+        app:showAsAction="never|withText"></item>
+    <item android:title="Text Your High Score"
+        android:id="@+id/menuActionTextScore"
+        app:showAsAction="never|withText"></item>
+
+</menu>
